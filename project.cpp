@@ -4,29 +4,20 @@
 #include<string.h>
 #include<math.h>
 #include<time.h>
-struct name{
-char first_name[20];
-char middle_name[20];
-char last_name[20];
-long long int number;
-struct {
-	char first_name[20];
-char middle_name[20];
-char last_name[20];
-long long int number;
-struct {
-	char first_name[20];
-char middle_name[20];
-char last_name[20];
-long long int number;
 
-}m;
-}f;
-}o;
+struct {
+	char first_name[20];
+	char middle_name[20];
+	char last_name[20];
+	long long int number;
+
+	}m,f,o;
+	
+
 int main()
 {
-		FILE *fp;
-	fp=fopen("D:\\saugat\\bank.txt","a+");
+	FILE *fp;
+	fp=fopen("D:\\bank.txt","a+");
 	if(fp==NULL)
 	{
 		printf("File cannot be created\n");
@@ -44,53 +35,50 @@ int main()
 	printf("\n\t2. Modifying the Account");
 	printf("\n\t3. Deleting the Account");
 	printf("\n\t4. Transaction");
-		printf("\n\t5. Viewing the Account");
-	//	printf("\n\t5. Transactions");
-			printf("\n\t6. Exit");
-printf("\n\n");
-printf("\nChoose between [1-6] for further process\n");
-//printf("Enter the number\n");
-scanf("%d",&s1);
-if(s1==1)
-{
+	printf("\n\t5. Viewing the Account");
+	printf("\n\t6. Exit");
+        printf("\n\n");
+	printf("\nChoose between [1-6] for further process\n");
+	scanf("%d",&s1);
+	if(s1==1)
+	{
 		int a,c,yea,mon,da;
 		printf("\nEnter todays date in A.D\n");
 		printf("\nEnter the year:");
 		scanf("%d",&yea);
 		printf("\nEnter the month:");
-			scanf("%d",&mon);
-				printf("\nEnter the day:");
-			scanf("%d",&da);
-		//	fprintf(fp,"\nDate of account creation :%d\%d\%d",yea,mon,da);
-	printf("\nDo you have an existing account\n");
-	printf("\n\t1. yes");
-	printf("\n\t2. No");
-	printf("\nEnter 1 for yes and 2 for No\n");
-	scanf("%d",&a);
-	if(a==1||a==2)
-	{
-		int ww;
-		printf("\nDo you want to create accouunt?\n");
-		printf("\nEnter any key to continue\n");
-		getch();
-	int m;
-	printf("Are you Nepalese?\n");
-	printf("\n\t1. yes");
-	printf("\n\t2. No");
-	printf("\nEnter 1 for yes and 2 for No\n");
-	scanf("%d",&m);
-	switch(m)
-	{
-		case 1:
-		fprintf(fp,"\n\nNepalese\nYes");
-			break;
-			case 2:
-				fprintf(fp,"\n\nNepalese\nNo");
-			printf("Sorry! not available for foreigneers\n");
-			break;
-			default:
+		scanf("%d",&mon);
+		printf("\nEnter the day:");
+		scanf("%d",&da);
+		printf("\nDo you have an existing account\n");
+		printf("\n\t1. yes");
+		printf("\n\t2. No");
+		printf("\nEnter 1 for yes and 2 for No\n");
+		scanf("%d",&a);
+		if(a==1||a==2)
+		{
+			int ww;
+			printf("\nDo you want to create accouunt?\n");
+			printf("\nEnter any key to continue\n");
+			getch();
+			int m;
+			printf("Are you Nepalese?\n");
+			printf("\n\t1. yes");
+			printf("\n\t2. No");
+			printf("\nEnter 1 for yes and 2 for No\n");
+			scanf("%d",&m);
+			switch(m)
+			{
+				case 1:
+				fprintf(fp,"\n\nNepalese\nYes");
+					break;
+					case 2:
+					fprintf(fp,"\n\nNepalese\nNo");
+					printf("Sorry! not available for foreigneers\n");
+					break;
+					default:
 					printf("error!!!");
-	}
+			}
 	if(m==1)
 	{
 	int n;
@@ -125,13 +113,11 @@ if(s1==1)
     gets(o.last_name);
     printf("\nEnter the phone number\n");
     scanf("%lld",&o.number);
-    //fprintf(fp,"\n\nFull name\n%s %s %s",o.first_name,o.middle_name,o.last_name);
-  //  fprintf(fp,"\nphone number=%lld",o.number);
     printf("\n\n");
    fflush(stdin);
     
     printf("\nEnter your father name\n");
-	printf("Enter first name\n");
+    printf("Enter first name\n");
     gets(o.f.first_name);
     printf("Enter middle name\n");
     gets(o.f.middle_name);
@@ -139,8 +125,6 @@ if(s1==1)
     gets(o.f.last_name);
      printf("\nEnter the phone number\n");
      scanf("%lld",&o.f.number);
-   //fprintf(fp,"\n\nFather's name\n%s %s %s",o.f.first_name,o.f.middle_name,o.f.last_name);
-   //fprintf(fp,"\nphone number=%lld",o.f.number);
     printf("\n\n");
    fflush(stdin);
     char first_name2[30],middle_name2[30],last_name2[30];
@@ -153,8 +137,6 @@ if(s1==1)
     gets(o.f.m.last_name);
      printf("\nEnter the phone number\n");
      scanf("%lld",&o.f.m.number);
-   // fprintf(fp,"\n\nMother's name\n%s %s %s",o.f.m.first_name,o.f.m.middle_name,o.f.m.last_name);
-// fprintf(fp,"\nphone number=%lld",o.f.m.number);
     printf("\n\n");
     fflush(stdin);
     char current_address[50],permanent_address[50];
@@ -163,8 +145,6 @@ if(s1==1)
     printf("\nEnter your permanent address\n");
     gets(permanent_address);
     printf("\n");
-  // fprintf(fp,"\n\nCurrent address\n%s",current_address);
-   //fprintf(fp,"\nPermanent address\n%s",permanent_address);
     printf("\n\n");
     fflush(stdin);
     int q;
@@ -194,7 +174,6 @@ if(s1==1)
     char email[50];
     printf("Enter your email\n");
     gets(email);
-  //  fprintf(fp,"\n\nEmail\n%s",email);
    printf("\n\n");
    fflush(stdin);
    int year,month,day;
@@ -205,13 +184,11 @@ if(s1==1)
    scanf("%d",&month);
    printf("Enter the day\n");
    scanf("%d",&day);
- //  fprintf(fp,"\n\nDate of birth\n %d/%d/%d",year,month,day);
    printf("\n\n");
    fflush(stdin);
    long long int k;
    printf("Enter your citizenship number\n");
    scanf("%lld",&k);
- //  fprintf(fp,"\n\nCitizenship Number\n%lld",k);
    printf("\n\n");
    fflush(stdin);
    
@@ -225,7 +202,7 @@ if(s1==1)
 	printf("\n\t1. Current deposit account");
 	printf("\n\t2. Saving deposit account");
 	printf("\n\t3. Fixed deposit account(for 1 year)");
-		printf("\n\t4. Fixed deposit account(for 2 year)");
+	printf("\n\t4. Fixed deposit account(for 2 year)");
 	printf("\n\t5. Fixed deposit account(for 3 year)");
 	printf("\n\t6. Fixed deposit account(for 4 year)");
 	printf("\n\n");
@@ -233,7 +210,7 @@ if(s1==1)
 	fprintf(fp,"\n\nTypes of account");
 	printf("\nChoose the type of account between [1-6] you want save your amount\n");
 	scanf("%d",&ch);
-switch(ch)
+	switch(ch)
 	{
 		case 1:
 			fprintf(fp,"\nCurrent Deposit account");
@@ -317,7 +294,7 @@ else
 	printf("\npress any key to continue\n");
 	getch();
 	FILE *fp;
-	fp=fopen("D:\\saugat\\bank.txt","r+");
+	fp=fopen("D:\\bank.txt","r+");
 	if(fp==NULL)
 	{
 		printf("File cannot be created\n");
@@ -608,7 +585,7 @@ int jk;
 	else if(s1==4)
 	{
 			FILE *fp;
-	fp=fopen("D:\\saugat\\bank.txt","r+");
+	fp=fopen("D:\\bank.txt","r+");
 	if(fp==NULL)
 	{
 		printf("File cannot be created\n");
@@ -744,7 +721,7 @@ else
 {
 	printf("\n\n\n\n\n\t\t\xB2\xB2\xB2\xB2\xB2\xB2\xB2Password Match! \xB2\xB2\xB2\xB2\xB2\xB2\xB2\n\n\n\n\n\n\t\nLOADING");
 		FILE *fp;
-	fp=fopen("D:\\saugat\\bank.txt","r");
+	fp=fopen("D:\\bank.txt","r");
 	if(fp==NULL)
 	{
 		printf("File cannot be created\n");
@@ -769,7 +746,7 @@ fclose(fp);
 
 	else if(s1==6)
 	{
-		printf("This mini c project was developed by the student of Ambition college");
+		printf("This mini c project was developed by Saugat from Ambition college.");
 		printf("\nEnter any key to exit\n");
 		getch();
 		exit(0);
